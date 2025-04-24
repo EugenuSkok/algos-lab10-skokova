@@ -17,7 +17,7 @@ def del_all():
  
  
 root = Tk()
-root.title("METANIT.COM")
+root.title("Список дел")
 root.geometry("300x250")
 root.columnconfigure(index=0, weight=4)
 root.columnconfigure(index=1, weight=1)
