@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import ttk
  
- 
 # удаление выделенного элемента
 def delete():
     selection = languages_listbox.curselection()
@@ -28,14 +27,14 @@ root.rowconfigure(index=2, weight=1)
  
 # текстовое поле и кнопка для добавления в список
 language_entry = ttk.Entry()
-language_entry.grid(column=0, row=0, padx=6, pady=6, sticky=EW)
-ttk.Button(text="Добавить", command=add).grid(column=1, row=0, padx=6, pady=6)
+language_entry.pack(fill="x")
+ttk.Button(text="Добавить", command=add).pack(padx=20)
  
 # создаем список
 languages_listbox = Listbox()
-languages_listbox.grid(row=1, column=0, columnspan=2, sticky=EW, padx=5, pady=5)
+languages_listbox.pack(fill="x")
  
-ttk.Button(text="Удалить", command=delete).grid(row=1, column=1, padx= 2, pady=2)
-ttk.Button(text="Удалить все", command=del_all).grid(row=4, column=2, padx=10, pady=10)
+ttk.Button(text="Удалить", command=delete).pack(padx=20)
+ttk.Button(text="Удалить все", command=del_all).pack(padx=20)
 
 root.mainloop()
